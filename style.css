@@ -1,0 +1,67 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.content > * {
+    z-index: 2;
+}
+
+.idea {
+    color: white;
+    font-size: 100px !important;
+    animation: newIdea 1s ease forwards;
+    transition-duration: 1s;
+}
+
+.idea:hover {
+    text-shadow: 0 0 20px rgb(139 92 246 / var(--tw-bg-opacity));
+    color: rgb(139 92 246 / var(--tw-bg-opacity));
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.generate-button {
+    margin-top: 100px;
+}
+
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
+}
+
+@keyframes newIdea {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    80% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
